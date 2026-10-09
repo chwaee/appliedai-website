@@ -392,7 +392,7 @@
                     <p class="contact-note">Prefer to talk on the phone? Mention it in your email and we'll set up a short call.</p>
                 </div>
                 <div class="contact-form">
-                    <form action="mailto:hello@appliedaiconsulting.io" method="POST" enctype="text/plain">
+                    <form id="brief-form">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
 
@@ -432,6 +432,42 @@
                         <button type="submit" class="btn btn-primary">Submit Your Brief</button>
                         <p class="optional-note">Want to talk instead of email? Just mention it above and we'll schedule a short call.</p>
                     </form>
+                    <script>
+                    document.getElementById('brief-form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        var v = function(id) { return document.getElementById(id).value.trim(); };
+                        var name = v('name'), email = v('email'), business = v('business'), tried = v('tried');
+                        var outcome = v('outcome'), budget = v('budget'), timeline = v('timeline'), msg = v('message');
+                        var lines = [
+                            'AI Consulting Brief',
+                            '',
+                            'Name: ' + name,
+                            'Email: ' + email,
+                            '',
+                            '1. Business & Problem:',
+                            business,
+                            '',
+                            '2. What we've tried:',
+                            tried || 'Not yet',
+                            '',
+                            '3. Desired outcome:',
+                            outcome,
+                            '',
+                            '4. Budget range:',
+                            budget || 'Not specified',
+                            '',
+                            '5. Timeline:',
+                            timeline || 'Not specified',
+                            '',
+                            'Additional notes:',
+                            msg || 'None',
+                        ];
+                        var subject = 'AI Consulting Brief - ' + name;
+                        var body = encodeURIComponent(lines.join('\n'));
+                        var to = encodeURIComponent('hello@appliedaiconsulting.io');
+                        window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + body;
+                    });
+                    </script>
                 </div>
             </div>
         </div>
