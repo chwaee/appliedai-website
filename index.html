@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applied AI Consulting | Practical AI for Small Business</title>
-    <meta name="description" content="We help small businesses cut AI tool costs 40-60%, automate repetitive work, and deploy private AI systems — no vendor lock-in, no data leaving your network.">
+    <title>Applied AI Consulting | AI Systems You Own</title>
+    <meta name="description" content="We build local AI systems, cut tool costs, and automate workflows. No API fees. No vendor lock-in. Fixed pricing.">
 
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a0a0a'/><text x='50' y='72' font-family='system-ui' font-size='70' font-weight='700' fill='%2322c55e' text-anchor='middle'>AI</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a0a0a'/><text x='50' y='68' font-family='system-ui,monospace' font-size='52' font-weight='700' fill='%2322c55e' text-anchor='middle'>A</text><text x='50' y='92' font-family='monospace' font-size='22' fill='%23555' text-anchor='middle'>AI</text></svg>">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Applied AI Consulting | Practical AI for Small Business">
-    <meta property="og:description" content="We help small businesses cut AI tool costs 40-60%, automate repetitive work, and deploy private AI systems.">
+    <meta property="og:title" content="Applied AI Consulting | AI Systems You Own">
+    <meta property="og:description" content="Local AI deployment, workflow automation, cost reduction. Fixed pricing. Async-first.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://appliedaiconsulting.io">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Applied AI Consulting">
-    <meta name="twitter:description" content="Cut AI tool costs. Automate work. Deploy private AI systems for your business.">
+    <meta name="twitter:description" content="We build AI systems you own. No API fees. No vendor lock-in.">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #1a1a1a; }
+        .mono { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; }
         .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
         /* Header */
         header { background: #0a0a0a; color: #fff; padding: 14px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1a1a1a; }
         header .container { display: flex; justify-content: space-between; align-items: center; }
-        header h1 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
-        header h1 span { color: #22c55e; }
+        header h1 { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
+        header h1 .logo-mark { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; background: #22c55e; color: #000; border-radius: 5px; font-size: 0.75rem; font-weight: 800; }
         header nav a { color: #a0a0a0; text-decoration: none; margin-left: 20px; font-size: 0.85rem; transition: color 0.2s; }
         header nav a:hover { color: #fff; }
         header .nav-cta { margin-left: 24px; }
         header .nav-cta a { color: #22c55e; font-weight: 600; }
 
-        /* Light-background button variant for service cards */
-        .btn-outline-dark { border: 1px solid #e0e0e0; color: #1a1a1a; background: #fff; }
-        .btn-outline-dark:hover { border-color: #0a0a0a; background: #f5f5f5; }
-
         /* Hero */
-        .hero { background: linear-gradient(180deg, #0a0a0a 0%, #111 100%); color: #fff; padding: 90px 0 70px; }
-        .hero h2 { font-size: 2.75rem; font-weight: 700; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.03em; }
+        .hero { background: #0a0a0a; color: #fff; padding: 90px 0 70px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 60% 20%, rgba(34,197,94,0.08) 0%, transparent 60%); pointer-events: none; }
+        .hero h2 { font-size: 2.6rem; font-weight: 700; line-height: 1.12; margin-bottom: 20px; letter-spacing: -0.03em; max-width: 700px; position: relative; }
         .hero h2 span { color: #22c55e; }
-        .hero p { font-size: 1.15rem; color: #b0b0b0; max-width: 640px; margin-bottom: 32px; line-height: 1.7; }
-        .hero .cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
-        .hero .sub-note { margin-top: 16px; font-size: 0.8rem; color: #555; }
+        .hero .lead { font-size: 1.1rem; color: #a0a0a0; max-width: 560px; margin-bottom: 32px; line-height: 1.7; position: relative; }
+        .hero .cta-group { display: flex; gap: 16px; flex-wrap: wrap; position: relative; }
+        .hero .sub-note { margin-top: 16px; font-size: 0.8rem; color: #555; position: relative; }
+        .hero .sub-note strong { color: #777; }
 
         /* Buttons */
-        .btn { display: inline-block; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; cursor: pointer; border: none; }
+        .btn { display: inline-block; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; cursor: pointer; border: none; text-align: center; }
         .btn-primary { background: #22c55e; color: #000; }
         .btn-primary:hover { background: #16a34a; transform: translateY(-1px); }
         .btn-outline { border: 1px solid #333; color: #fff; background: transparent; }
         .btn-outline:hover { border-color: #fff; }
-        .btn-secondary { background: #1a1a1a; color: #fff; }
-        .btn-secondary:hover { background: #2a2a2a; }
+        .btn-outline-dark { border: 1px solid #e0e0e0; color: #1a1a1a; background: #fff; }
+        .btn-outline-dark:hover { border-color: #0a0a0a; background: #f5f5f5; }
 
         /* Sections */
         .section { padding: 70px 0; }
@@ -63,11 +62,24 @@
         .section-subtitle { color: #666; margin-bottom: 36px; max-width: 560px; font-size: 1rem; }
         .section-dark .section-subtitle { color: #888; }
 
-        /* Problems */
+        /* Problem cards */
         .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
         .problem-card { background: #fff; padding: 24px; border-radius: 12px; border: 1px solid #eee; }
         .problem-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
         .problem-card p { color: #666; font-size: 0.88rem; }
+
+        /* Proof / capability section */
+        .proof-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 36px; }
+        .proof-item { margin-bottom: 28px; }
+        .proof-item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #22c55e; font-weight: 700; margin-bottom: 6px; }
+        .proof-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: #fff; }
+        .proof-item p { color: #999; font-size: 0.88rem; line-height: 1.65; }
+        .proof-item code { background: #151515; padding: 2px 6px; border-radius: 4px; font-size: 0.82rem; color: #22c55e; }
+        .proof-tech-stack { background: #111; padding: 28px; border-radius: 12px; border: 1px solid #1a1a1a; }
+        .proof-tech-stack h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
+        .tech-tag { display: inline-block; background: #1a1a1a; color: #b0b0b0; padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; margin: 4px 6px 4px 0; border: 1px solid #252525; }
+        .tech-tag strong { color: #22c55e; }
+        .proof-note { font-size: 0.78rem; color: #555; margin-top: 24px; line-height: 1.6; }
 
         /* Services */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 36px; }
@@ -75,13 +87,15 @@
         .service-card.popular { border-color: #22c55e; }
         .service-card.popular .badge { position: absolute; top: -12px; left: 24px; background: #22c55e; color: #000; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
         .service-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.01em; }
+        .service-card .tagline { font-size: 0.82rem; color: #888; margin-bottom: 12px; }
         .service-card .price { font-size: 2rem; font-weight: 700; margin: 12px 0; letter-spacing: -0.03em; }
         .service-card .price span { font-size: 0.85rem; color: #666; font-weight: 400; }
         .service-card .desc { color: #666; font-size: 0.88rem; margin-bottom: 16px; flex-grow: 1; }
         .service-card ul { list-style: none; margin-bottom: 24px; }
         .service-card ul li { font-size: 0.84rem; color: #444; padding: 5px 0; padding-left: 18px; position: relative; }
-        .service-card ul li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-        .service-card .btn { width: 100%; text-align: center; }
+        .service-card ul li::before { content: '→'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
+        .service-card .btn { width: 100%; }
+        .service-card .fine-print { font-size: 0.72rem; color: #999; margin-top: 8px; }
 
         /* Process */
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; margin-top: 36px; }
@@ -90,20 +104,15 @@
         .step h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
         .step p { color: #666; font-size: 0.84rem; }
 
-        /* About */
-        .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 36px; }
-        .about-bio p { margin-bottom: 14px; color: #444; font-size: 0.95rem; }
-        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .about-stat { background: #fff; padding: 24px; border-radius: 12px; border: 1px solid #eee; }
-        .about-stat .number { font-size: 1.8rem; font-weight: 700; color: #22c55e; margin-bottom: 4px; }
-        .about-stat .label { font-size: 0.84rem; color: #666; }
-
-        /* Proof / Values */
-        .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 36px; }
-        .proof-item { text-align: center; padding: 20px; }
-        .proof-item .icon { font-size: 2rem; margin-bottom: 12px; }
-        .proof-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
-        .proof-item p { color: #666; font-size: 0.84rem; }
+        /* Who it's for */
+        .fit-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 36px; }
+        .fit-col h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+        .fit-col ul { list-style: none; }
+        .fit-col ul li { font-size: 0.88rem; padding: 8px 0; border-bottom: 1px solid #eee; color: #555; }
+        .fit-col.nope ul li { border-color: #333; color: #888; }
+        .fit-col ul li::before { margin-right: 8px; font-weight: 700; }
+        .fit-col.yes ul li::before { color: #22c55e; content: '✓'; }
+        .fit-col.nope ul li::before { color: #666; content: '×'; }
 
         /* FAQ */
         .faq-list { max-width: 720px; margin-top: 36px; }
@@ -139,10 +148,13 @@
         footer .footer-links a { color: #666; text-decoration: none; margin-left: 20px; }
         footer .footer-links a:hover { color: #fff; }
 
+        /* Divider accent */
+        .accent-line { height: 1px; background: linear-gradient(90deg, #22c55e, transparent); margin: 4px 0 16px; max-width: 60px; }
+
         @media (max-width: 768px) {
             .hero h2 { font-size: 2rem; }
             .hero { padding: 60px 0 40px; }
-            .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+            .proof-layout, .fit-layout, .contact-layout { grid-template-columns: 1fr; gap: 32px; }
             header .container { flex-direction: column; gap: 10px; }
             header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-left: 0; }
             header nav a { margin-left: 0; padding: 4px 8px; }
@@ -154,235 +166,263 @@
 <body>
     <header>
         <div class="container">
-            <h1>Applied <span>AI</span> Consulting</h1>
+            <h1><span class="logo-mark">A</span> Applied AI Consulting</h1>
             <nav>
                 <a href="#services">Services</a>
+                <a href="#capability">Capability</a>
                 <a href="#process">Process</a>
-                <a href="#about">About</a>
                 <a href="#faq">FAQ</a>
                 <span class="nav-cta"><a href="#contact">Submit Your Brief</a></span>
             </nav>
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h2>Stop wasting money<br>on <span>AI tools</span> that<br>don't work for you.</h2>
-            <p>We help small businesses cut AI tool costs by 40–60%, automate repetitive work, and deploy private AI systems — no vendor lock-in, no data leaving your network.</p>
+            <h2>AI systems you own.<br><span>No API costs.</span> No vendor lock-in.</h2>
+            <p class="lead">We deploy local AI models on your hardware, cut tool spending, and build automations that actually run. Fixed pricing. Async-first. No phone calls required.</p>
             <div class="cta-group">
                 <a href="#contact" class="btn btn-primary">Submit Your Brief</a>
                 <a href="#services" class="btn btn-outline">See Our Services</a>
             </div>
-            <p class="sub-note">Fixed pricing. No hourly billing. No ongoing platform fees.</p>
+            <p class="sub-note"><strong>What we don't do:</strong> hourly billing. Strategy decks. Monthly platform fees.</p>
         </div>
     </section>
 
+    <!-- THE PROBLEM -->
     <section class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Sound familiar?</h2>
-            <p class="section-subtitle">Most businesses are spending on AI without getting real results.</p>
+            <div class="accent-line"></div>
+            <h2 class="section-title">This usually starts the same way</h2>
+            <p class="section-subtitle">Your team's already using AI tools. Something's not working.</p>
             <div class="problem-grid">
                 <div class="problem-card">
-                    <h3>Too many tools</h3>
-                    <p>Team is paying for 5+ AI subscriptions. Nobody knows which ones actually help.</p>
+                    <h3>Too many subscriptions</h3>
+                    <p>Someone signed up for everything. Six tools. Two are actually used. You're paying for all of them.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>Data privacy concerns</h3>
-                    <p>Using tools like ChatGPT with sensitive client data. It works, but you're nervous about it.</p>
+                    <h3>Data you shouldn't be sharing</h3>
+                    <p>Staff are pasting client information into tools you didn't approve. It works, but it's a risk.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>Nothing automated</h3>
-                    <p>Staff still doing repetitive manual work that AI should handle — but nobody knows how to set it up.</p>
+                    <h3>Manual work AI should handle</h3>
+                    <p>Repetitive tasks that waste hours every week. Everyone knows AI could do them — nobody set it up.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>Overwhelmed by hype</h3>
-                    <p>Everyone says you need AI. You just want someone to tell you what to actually do.</p>
+                    <h3>Consultants who slid</h3>
+                    <p>You've been pitched "AI strategy" before. Got a deck. Nothing shipped. You're skeptical now.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CAPABILITY / PROOF -->
+    <section class="section section-dark" id="capability">
+        <div class="container">
+            <div class="accent-line" style="background: linear-gradient(90deg, #22c55e, transparent);"></div>
+            <h2 class="section-title" style="color:#fff;">We practice what we ship</h2>
+            <p class="section-subtitle" style="color:#888;">Before selling a capability, we use it ourselves.</p>
+            <div class="proof-layout">
+                <div>
+                    <div class="proof-item">
+                        <div class="label">Built &amp; running</div>
+                        <h3>Second Brain knowledge system</h3>
+                        <p>A fully local AI knowledge infrastructure: semantic search over 7,000+ conversations, contradiction detection, automated knowledge promotion, retrieval evaluation harness. Running on <code>llama.cpp</code> + <code>vLLM</code> with <code>qwen3.6-27b</code> on a single RTX 3090. No API calls.</p>
+                    </div>
+                    <div class="proof-item">
+                        <div class="label">Built &amp; running</div>
+                        <h3>Multi-agent workflows</h3>
+                        <p>Autonomous agent orchestration for code planning, deployment, and research. Agents that reason, delegate, and execute — all running locally or via controlled API access. The same patterns we'd deploy for clients.</p>
+                    </div>
+                    <div class="proof-item">
+                        <div class="label">Built &amp; running</div>
+                        <h3>Local search service</h3>
+                        <p>Multi-provider search orchestration with automatic fallback between SearXNG, DuckDuckGo, and Brave. Built because single-provider dependencies are a failure mode you can't afford.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="proof-tech-stack">
+                        <h3>Technical depth</h3>
+                        <div>
+                            <span class="tech-tag"><strong>Local inference:</strong> llama.cpp, vLLM</span>
+                            <span class="tech-tag"><strong>Models:</strong> Qwen, Llama, Mistral</span>
+                            <span class="tech-tag"><strong>Quantization:</strong> GGUF, GPTQ</span>
+                            <span class="tech-tag"><strong>Semantic search:</strong> pgvector, embeddings</span>
+                            <span class="tech-tag"><strong>Orchestration:</strong> Hermes Agent, OpenCode</span>
+                            <span class="tech-tag"><strong>Infrastructure:</strong> Docker, FastAPI</span>
+                            <span class="tech-tag"><strong>Search:</strong> SearXNG, DuckDuckGo</span>
+                            <span class="tech-tag"><strong>Runtime:</strong> Python, Bash, Git</span>
+                        </div>
+                    </div>
+                    <p class="proof-note">These aren't proof-of-concept demos. They're systems we rely on daily. That's the standard we bring to client work: if it's not good enough to run your own operations, it doesn't ship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
     <section class="section" id="services">
         <div class="container">
-            <h2 class="section-title">Three ways we help</h2>
+            <div class="accent-line"></div>
+            <h2 class="section-title">Three services. Clear scope. Fixed pricing.</h2>
             <p class="section-subtitle">Start small. See results. Scale what works.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>AI Waste Audit</h3>
+                    <h3>Spending Audit</h3>
+                    <p class="tagline">Find what you're wasting money on.</p>
                     <div class="price">$500 <span>one-time</span></div>
-                    <p class="desc">90-minute deep dive into your current AI tools and workflows. You get a clear report showing what to keep, cut, and automate.</p>
+                    <p class="desc">90-minute deep dive into your AI tool stack and workflows. You get a specific report showing what to cut, what to keep, and what to automate next.</p>
                     <ul>
-                        <li>Review of all AI tools and subscriptions</li>
-                        <li>Usage analysis based on your team's input</li>
-                        <li>Specific savings recommendations</li>
-                        <li>Implementation roadmap</li>
+                        <li>Full review of AI tools and subscriptions</li>
+                        <li>Usage analysis from your team's actual patterns</li>
+                        <li>Specific savings estimate with recommended cuts</li>
+                        <li>3-5 automations worth building, in priority order</li>
                         <li>Delivered within 48 business hours</li>
                     </ul>
-                    <p style="font-size:0.75rem;color:#666;margin-top:8px;">Final scope confirmed in proposal before work begins.</p>
                     <a href="#contact" class="btn btn-outline-dark">Request an Audit</a>
+                    <p class="fine-print">Final scope confirmed in proposal before work begins.</p>
                 </div>
                 <div class="service-card popular">
-                    <span class="badge">MOST POPULAR</span>
-                    <h3>Private AI Setup</h3>
+                    <span class="badge">MOST REQUESTED</span>
+                    <h3>Local AI Deployment</h3>
+                    <p class="tagline">Run AI on your hardware. Own it.</p>
                     <div class="price">$1,500–3,000 <span>per project</span></div>
-                    <p class="desc">We deploy a private AI system that keeps your data on your infrastructure. No monthly API fees. No vendor lock-in.</p>
+                    <p class="desc">We install and configure local AI models connected to your documents and data. Your team gets AI capability without sending anything to external APIs.</p>
                     <ul>
-                        <li>Local model installation and configuration</li>
-                        <li>Connected to your documents and data</li>
-                        <li>Secure internal access for your team</li>
-                        <li>Hardware assessment and recommendations included</li>
-                        <li>Training session included</li>
+                        <li>Hardware assessment and model selection</li>
+                        <li>Local model installation (llama.cpp or vLLM)</li>
+                        <li>Connected to your documents, databases, or knowledge bases</li>
+                        <li>Secure internal access configured</li>
+                        <li>Team training and documentation included</li>
                     </ul>
-                    <p style="font-size:0.75rem;color:#666;margin-top:8px;">Cloud hosting costs may apply if you don't have local hardware. Final scope confirmed before work begins.</p>
                     <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <p class="fine-print">Cloud hosting costs may apply if you lack local hardware. Final scope confirmed before work begins.</p>
                 </div>
                 <div class="service-card">
                     <h3>Workflow Automation</h3>
+                    <p class="tagline">Automate what your team shouldn't be doing manually.</p>
                     <div class="price">$1,000–2,500 <span>per workflow</span></div>
-                    <p class="desc">We identify repetitive tasks and build AI automations that run in the background, saving your team time on manual work.</p>
+                    <p class="desc">We find repetitive tasks and build working automations. Email triage, document processing, research pipelines, report generation — whatever wastes hours.</p>
                     <ul>
                         <li>Workflow analysis and prioritization</li>
-                        <li>Custom automation development</li>
-                        <li>Integration with your existing tools</li>
-                        <li>Testing and documentation</li>
-                        <li>Handover and training</li>
+                        <li>Custom automation built and tested</li>
+                        <li>Integrated with your existing tools</li>
+                        <li>Documentation and handover included</li>
+                        <li>Typical delivery: 3–10 days</li>
                     </ul>
-                    <p style="font-size:0.75rem;color:#666;margin-top:8px;">Final scope confirmed in proposal before work begins.</p>
                     <a href="#contact" class="btn btn-outline-dark">Learn More</a>
+                    <p class="fine-print">Final scope confirmed in proposal before work begins.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PROCESS -->
     <section class="section section-alt" id="process">
         <div class="container">
+            <div class="accent-line"></div>
             <h2 class="section-title">How it works</h2>
-            <p class="section-subtitle">Simple, transparent, no fluff. No phone calls required.</p>
+            <p class="section-subtitle">Async-first by default. No phone calls required. Everything happens via email.</p>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Submit Your Brief</h3>
-                    <p>Tell us about your business, your problem, and your goals via email.</p>
+                    <p>Tell us about your business, the problem you're facing, your budget, and timeline.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Receive a Proposal</h3>
-                    <p>We review your brief and send a clear proposal with scope, timeline, and fixed pricing.</p>
+                    <h3>Get a Proposal</h3>
+                    <p>We respond with clear scope, timeline, and fixed pricing. Usually within hours on business days.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Implementation</h3>
-                    <p>We build, test, and deploy. You're involved at every step.</p>
+                    <h3>We Build</h3>
+                    <p>You get weekly updates. We deploy, test, and document. No vague "strategy phases."</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Results</h3>
-                    <p>You get working systems, documentation, and training.</p>
+                    <h3>It Ships</h3>
+                    <p>You get working systems, documentation, and training. You own everything we build.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- WHO IT'S FOR -->
+    <section class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Our approach</h2>
-            <p class="section-subtitle">What sets us apart from generic AI consultants.</p>
-            <div class="proof-grid">
-                <div class="proof-item">
-                    <div class="icon">🔒</div>
-                    <h3>Privacy First</h3>
-                    <p>We prioritize keeping your data on your infrastructure. Local models, private deployments, zero unnecessary data sharing.</p>
+            <div class="accent-line" style="background: linear-gradient(90deg, #22c55e, transparent);"></div>
+            <h2 class="section-title" style="color:#fff;">Who we're a fit for</h2>
+            <div class="fit-layout">
+                <div class="fit-col yes">
+                    <h3 style="color:#fff;">You're a good fit if you...</h3>
+                    <ul>
+                        <li>Are a small-to-mid business (2–50 employees)</li>
+                        <li>Already spend money on AI tools and want results</li>
+                        <li>Want your data off external APIs</li>
+                        <li>Prefer fixed pricing over hourly billing</li>
+                        <li>Want working systems, not strategy decks</li>
+                        <li>Communicate better by email than phone</li>
+                    </ul>
                 </div>
-                <div class="proof-item">
-                    <div class="icon">💰</div>
-                    <h3>Fixed Pricing</h3>
-                    <p>You know the cost before we start. No hourly billing surprises. No open-ended scopes.</p>
-                </div>
-                <div class="proof-item">
-                    <div class="icon">🛠️</div>
-                    <h3>Build, Don't Slide</h3>
-                    <p>We deliver working systems you can use. Not 100-page strategy decks nobody reads.</p>
-                </div>
-                <div class="proof-item">
-                    <div class="icon">⚡</div>
-                    <h3>Fast Turnaround</h3>
-                    <p>Most audits delivered in 48 hours. Setups complete in 1–2 weeks. We move fast.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-alt" id="about">
-        <div class="container">
-            <h2 class="section-title">About</h2>
-            <p class="section-subtitle">Who's behind Applied AI Consulting.</p>
-            <div class="about-layout">
-                <div class="about-bio">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 14px;">Elliot Beaumont, Founder</h3>
-                    <p>I started Applied AI Consulting because most businesses I talked to were doing one of three things with AI: paying for tools they didn't understand, using them with data they shouldn't, or feeling paralyzed by all the hype.</p>
-                    <p>I've spent years working with local AI models, automation systems, and practical AI deployment. My focus is on solutions that actually work for real businesses — not theoretical strategy decks.</p>
-                    <p>When I work with you, you get fixed pricing, clear deliverables, and systems you own. No monthly platform fees. No vendor lock-in.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="about-stat">
-                        <div class="number">Private</div>
-                        <div class="label">AI on your hardware, your data stays yours</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="number">40–60%</div>
-                        <div class="label">Typical AI tool cost reduction after audit</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="number">48h</div>
-                        <div class="label">Typical turnaround for audit deliverables</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="number">1–2 wk</div>
-                        <div class="label">Typical timeline for private AI setup</div>
-                    </div>
+                <div class="fit-col nope">
+                    <h3 style="color:#aaa;">We're probably not right if you...</h3>
+                    <ul>
+                        <li>Want "magic" without team involvement</li>
+                        <li>Expect a 100-page strategy document</li>
+                        <li>Want us to hold your hand long-term</li>
+                        <li>Need immediate ROI within 48 hours</li>
+                        <li>Prefer managed SaaS over owning infrastructure</li>
+                        <li>Only want ChatGPT wrappers</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section section-alt" id="faq">
         <div class="container">
+            <div class="accent-line"></div>
             <h2 class="section-title">Frequently asked questions</h2>
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary>Do I need to schedule a call with you?</summary>
-                    <p>No. We do everything asynchronously by default. Send us your brief via email, we review it, and send you a proposal. If you'd prefer a phone conversation, just mention it — we can accommodate that.</p>
+                    <summary>Do I need to schedule a call?</summary>
+                    <p>No. We do everything asynchronously by default. Send your brief via email, we review it, and send you a proposal. If you'd prefer to talk, mention it — we can accommodate that.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Do I need technical knowledge to work with you?</summary>
+                    <summary>Do I need technical knowledge?</summary>
                     <p>No. We handle the technical setup and explain everything in plain language. You just need to tell us about your business and what's painful.</p>
                 </details>
                 <details class="faq-item">
                     <summary>What kind of businesses do you work with?</summary>
-                    <p>Small to mid-size businesses (2–50 employees) in professional services, healthcare, marketing, e-commerce, and other industries where AI can cut costs or save time.</p>
+                    <p>Professional services, healthcare practices, marketing agencies, e-commerce, and any small team wasting money on tools that don't pay for themselves.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Why is private AI better than just using ChatGPT?</summary>
-                    <p>Three reasons: (1) Your data never leaves your network — important for client confidentiality. (2) No ongoing API costs — you pay once for setup. (3) You own the system — no vendor lock-in, no policy changes affecting your workflow.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How long does a project take?</summary>
-                    <p>An AI Waste Audit is typically delivered within 48 business hours from kickoff. Private AI setups take 1–2 weeks. Workflow automations take 3–10 days depending on complexity. We'll give you a clear timeline before we start.</p>
+                    <summary>Why local AI instead of just using ChatGPT?</summary>
+                    <p>Three reasons: (1) Your data never leaves your network — critical for confidentiality. (2) No ongoing API costs — you pay once for setup. (3) You own the system — no vendor lock-in, no policy changes breaking your workflow.</p>
                 </details>
                 <details class="faq-item">
                     <summary>What if it doesn't work out?</summary>
-                    <p>Every engagement has a defined scope and deliverables upfront. You won't be billed for work that doesn't meet what we agreed on. And our audits are low-risk — $500 fixed price to see exactly what you should do next.</p>
+                    <p>Every engagement has defined scope and deliverables upfront. You won't be billed for work that doesn't meet what we agreed on. Our audits are low-risk — $500 fixed price to see exactly what you should do next.</p>
                 </details>
                 <details class="faq-item">
                     <summary>Do you offer ongoing support?</summary>
-                    <p>Yes. We offer optional monthly retainers ($1,000–2,000/month) for ongoing AI work, maintenance, and new projects. But every initial engagement is a fixed-price project — no ongoing commitment required.</p>
+                    <p>Yes. Optional monthly retainers ($1,000–2,000/month) for maintenance and new projects. But every initial engagement is fixed-price — no ongoing commitment required.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How long does a project take?</summary>
+                    <p>Spending Audits: 48 business hours. Local AI deployments: 1–2 weeks. Workflow automations: 3–10 days depending on complexity. We'll give you a clear timeline before we start.</p>
                 </details>
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="section section-dark" id="contact">
         <div class="container">
+            <div class="accent-line" style="background: linear-gradient(90deg, #22c55e, transparent);"></div>
             <h2 class="section-title" style="color:#fff;">Submit your brief</h2>
             <p class="section-subtitle" style="color:#888;">Send us an email with the details below. We respond within a few hours on business days.</p>
             <div class="contact-layout">
@@ -455,7 +495,7 @@
                             '1. Business & Problem:',
                             business,
                             '',
-                            '2. What we've tried:',
+                            '2. What we\'ve tried:',
                             tried || 'Not yet',
                             '',
                             '3. Desired outcome:',
@@ -481,9 +521,10 @@
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to stop wasting money on AI?</h2>
+            <h2>Ready to stop renting AI?</h2>
             <p>Send us your brief. We'll review it and send you a proposal with fixed pricing — no phone calls required.</p>
             <a href="#contact" class="btn btn-primary">Submit Your Brief</a>
             <p style="margin-top: 24px; font-size: 0.85rem;">Or email: <a href="mailto:hello@appliedaiconsulting.io" class="email-link">hello@appliedaiconsulting.io</a></p>
@@ -492,10 +533,10 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 Applied AI Consulting. All rights reserved.</p>
+            <p>&copy; 2026 Applied AI Consulting. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#services">Services</a>
-                <a href="#about">About</a>
+                <a href="#capability">Capability</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
