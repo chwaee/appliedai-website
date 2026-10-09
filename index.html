@@ -115,10 +115,13 @@
         .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 36px; }
         .contact-info p { margin-bottom: 14px; color: #b0b0b0; font-size: 0.95rem; }
         .contact-info a { color: #22c55e; }
-        .contact-template { background: #111; padding: 28px; border-radius: 12px; border: 1px solid #1a1a1a; margin-top: 24px; }
-        .contact-template h4 { color: #fff; font-size: 0.9rem; margin-bottom: 12px; }
-        .contact-template pre { color: #aaa; font-size: 0.82rem; line-height: 1.6; white-space: pre-wrap; font-family: 'SF Mono', 'Fira Code', monospace; background: #0a0a0a; padding: 16px; border-radius: 8px; border: 1px solid #222; }
-        .contact-template .btn { margin-top: 16px; }
+        .contact-form { background: #111; padding: 32px; border-radius: 12px; border: 1px solid #1a1a1a; }
+        .contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #333; border-radius: 8px; background: #0a0a0a; color: #fff; font-size: 0.9rem; font-family: inherit; }
+        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline: none; border-color: #22c55e; }
+        .contact-form textarea { height: 100px; resize: vertical; }
+        .contact-form label { font-size: 0.8rem; color: #888; margin-bottom: 4px; display: block; }
+        .contact-form .btn { width: 100%; }
+        .contact-form .optional-note { font-size: 0.78rem; color: #666; margin-top: 12px; }
         .contact-note { font-size: 0.85rem; color: #666; margin-top: 16px; }
 
         /* CTA */
@@ -388,32 +391,47 @@
                     <p><strong>Response time:</strong> Usually within a few hours on business days.</p>
                     <p class="contact-note">Prefer to talk on the phone? Mention it in your email and we'll set up a short call.</p>
                 </div>
-                <div class="contact-template">
-                    <h4>Email template:</h4>
-<pre>Subject: AI Consulting Brief - [Your Company Name]
+                <div class="contact-form">
+                    <form action="mailto:hello@appliedaiconsulting.io" method="POST" enctype="text/plain">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
 
-1. Business & Problem:
-[Describe your business and what you want help with]
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
 
-2. What we've tried:
-[What tools or approaches you've explored so far]
+                        <label for="business">What is your business, and what specific problem do you want help with?</label>
+                        <textarea id="business" name="business_problem" placeholder="E.g. We're a marketing agency with 8 people. We're paying for 6 different AI tools and nobody is using them well." required></textarea>
 
-3. Desired outcome:
-[What would make this investment worthwhile?]
+                        <label for="tried">What have you tried or researched so far?</label>
+                        <input type="text" id="tried" name="what_tried" placeholder="E.g. We tried ChatGPT Plus and Jasper but neither is solving the workflow issue.">
 
-4. Budget range:
-[$500-$1,000 / $1,000-$3,000 / $3,000-$5,000 / $5,000+]
+                        <label for="outcome">What outcome would make this investment worthwhile for you?</label>
+                        <input type="text" id="outcome" name="desired_outcome" placeholder="E.g. Cut our AI tool spend in half, or automate our proposal writing." required>
 
-5. Timeline:
-[When do you need this solved by?]
+                        <label for="budget">What budget range are you looking at for this project?</label>
+                        <select id="budget" name="budget_range">
+                            <option value="">Select a range</option>
+                            <option value="500-1000">$500 – $1,000</option>
+                            <option value="1000-3000">$1,000 – $3,000</option>
+                            <option value="3000-5000">$3,000 – $5,000</option>
+                            <option value="5000+">$5,000+</option>
+                        </select>
 
-Anything else:
-[Additional context]
+                        <label for="timeline">When are you looking to have this solved by?</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select a timeframe</option>
+                            <option value="asap">ASAP (this week)</option>
+                            <option value="1month">Within 1 month</option>
+                            <option value="3months">Within 3 months</option>
+                            <option value="exploring">Just exploring for now</option>
+                        </select>
 
-Thanks,
-[Your Name]
-[Your Title]</pre>
-                    <a href="mailto:hello@appliedaiconsulting.io" class="btn btn-primary">Email Your Brief</a>
+                        <label for="message">Anything else we should know?</label>
+                        <textarea id="message" name="additional_details" placeholder="Anything else about your situation..."></textarea>
+
+                        <button type="submit" class="btn btn-primary">Submit Your Brief</button>
+                        <p class="optional-note">Want to talk instead of email? Just mention it above and we'll schedule a short call.</p>
+                    </form>
                 </div>
             </div>
         </div>
