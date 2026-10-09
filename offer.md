@@ -117,9 +117,12 @@ WHAT WE DON'T DO
 
 GETTING STARTED
 ---------------
-1. Book a free 15-minute call: hello@appliedaiconsulting.io
-2. We learn about your business and pain points
-3. We send a proposal with clear scope and pricing
-4. If it's a fit, we start within 48 hours of payment
+1. Submit your brief: applyaiconsulting.io or email hello@appliedaiconsulting.io
+   Tell us about your business, the problem you're facing, your budget range, and your timeline.
+2. We review and respond with a clear proposal: scope, timeline, fixed pricing
+3. If it's a fit, we start within 48 hours of payment
+
+No phone calls required. Everything happens via email by default.
+Prefer to talk? Mention it in your brief and we'll schedule a short call.
 
 Questions? Email: hello@appliedaiconsulting.io

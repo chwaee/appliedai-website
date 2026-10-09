@@ -127,6 +127,7 @@
         .contact-form textarea { height: 100px; resize: vertical; }
         .contact-form label { font-size: 0.8rem; color: #888; margin-bottom: 4px; display: block; }
         .contact-form .btn { width: 100%; }
+        .contact-form .optional-note { font-size: 0.78rem; color: #666; margin-top: 12px; }
         
         /* CTA */
         .cta { padding: 70px 0; background: #0a0a0a; color: #fff; text-align: center; }
@@ -159,7 +160,7 @@
                 <a href="#process">Process</a>
                 <a href="#about">About</a>
                 <a href="#faq">FAQ</a>
-                <span class="nav-cta"><a href="#contact">Book a Call</a></span>
+                <span class="nav-cta"><a href="#contact">Submit Your Brief</a></span>
             </nav>
         </div>
     </header>
@@ -169,7 +170,7 @@
             <h2>Stop wasting money<br>on <span>AI tools</span> that<br>don't work for you.</h2>
             <p>We help small businesses cut AI tool costs by 40–60%, automate repetitive work, and deploy private AI systems — no vendor lock-in, no data leaving your network.</p>
             <div class="cta-group">
-                <a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a>
+                <a href="#contact" class="btn btn-primary">Submit Your Brief</a>
                 <a href="#services" class="btn btn-outline">See Our Services</a>
             </div>
             <p class="sub-note">Fixed pricing. No hourly billing. No ongoing platform fees.</p>
@@ -217,7 +218,7 @@
                         <li>Implementation roadmap</li>
                         <li>Delivered within 48 hours</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Book an Audit</a>
+                    <a href="#contact" class="btn btn-outline">Request an Audit</a>
                 </div>
                 <div class="service-card popular">
                     <span class="badge">MOST POPULAR</span>
@@ -253,17 +254,17 @@
     <section class="section section-alt" id="process">
         <div class="container">
             <h2 class="section-title">How it works</h2>
-            <p class="section-subtitle">Simple, transparent, no fluff.</p>
+            <p class="section-subtitle">Simple, transparent, no fluff. No phone calls required.</p>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Discovery Call</h3>
-                    <p>15 minutes. We learn about your business, pain points, and goals.</p>
+                    <h3>Submit Your Brief</h3>
+                    <p>Tell us about your business, your problem, and your goals using our quick form.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Recommendation</h3>
-                    <p>We send a clear proposal with scope, timeline, and fixed pricing.</p>
+                    <h3>Receive a Proposal</h3>
+                    <p>We review your brief and send a clear proposal with scope, timeline, and fixed pricing.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
@@ -371,6 +372,10 @@
             <h2 class="section-title">Frequently asked questions</h2>
             <div class="faq-list">
                 <details class="faq-item">
+                    <summary><h3>Do I need to schedule a call with you?</h3></summary>
+                    <p>No. We do everything asynchronously by default. Submit your brief through the form, we review it, and send you a proposal via email. If you'd prefer a phone conversation, just mention it in your brief — we can accommodate that.</p>
+                </details>
+                <details class="faq-item">
                     <summary><h3>Do I need technical knowledge to work with you?</h3></summary>
                     <p>No. We handle the technical setup and explain everything in plain language. You just need to tell us about your business and what's painful.</p>
                 </details>
@@ -400,15 +405,16 @@
 
     <section class="section section-dark" id="contact">
         <div class="container">
-            <h2 class="section-title" style="color:#fff;">Let's talk about your AI situation</h2>
-            <p class="section-subtitle" style="color:#888;">Book a free 15-minute call or send us a message.</p>
+            <h2 class="section-title" style="color:#fff;">Tell us about your AI situation</h2>
+            <p class="section-subtitle" style="color:#888;">Submit your brief and we'll send you a proposal within 24 hours.</p>
             <div class="contact-layout">
                 <div class="contact-info">
-                    <p><strong>What happens on the call:</strong></p>
-                    <p>You tell us about your business, your current AI tools, and what's frustrating. We listen, then we'll suggest whether we can help and how.</p>
-                    <p><strong>No pitch. No pressure. No commitment.</strong></p>
-                    <p style="margin-top: 24px;">Email: <a href="mailto:hello@appliedaiconsulting.io">hello@appliedaiconsulting.io</a></p>
+                    <p><strong>How this works:</strong></p>
+                    <p>Fill out the form with details about your business, the problem you're facing, and what you want to achieve. We review your brief and respond with a clear proposal including scope, timeline, and fixed pricing.</p>
+                    <p><strong>No scheduling. No phone calls required. No pressure.</strong></p>
+                    <p style="margin-top: 24px;">Email directly: <a href="mailto:hello@appliedaiconsulting.io">hello@appliedaiconsulting.io</a></p>
                     <p>Response time: Usually within a few hours on business days.</p>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: #666;">Prefer to talk on the phone? Mention it in your brief — we'll set up a short call.</p>
                 </div>
                 <div class="contact-form">
                     <form action="mailto:hello@appliedaiconsulting.io" method="POST" enctype="text/plain">
@@ -418,18 +424,38 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="your@email.com" required>
                         
-                        <label for="service">What are you interested in?</label>
-                        <select id="service" name="service">
-                            <option value="not-sure">Not sure yet</option>
-                            <option value="audit">AI Waste Audit ($500)</option>
-                            <option value="private-ai">Private AI Setup ($1,500–3,000)</option>
-                            <option value="automation">Workflow Automation ($1,000–2,500)</option>
+                        <label for="business">What is your business, and what specific problem do you want help with?</label>
+                        <textarea id="business" name="business_problem" placeholder="E.g. We're a marketing agency with 8 people. We're paying for 6 different AI tools and nobody is using them well." required></textarea>
+                        
+                        <label for="tried">What have you tried or researched so far?</label>
+                        <input type="text" id="tried" name="what_tried" placeholder="E.g. We tried ChatGPT Plus and Jasper but neither is solving the workflow issue.">
+                        
+                        <label for="outcome">What outcome would make this investment worthwhile for you?</label>
+                        <input type="text" id="outcome" name="desired_outcome" placeholder="E.g. Cut our AI tool spend in half, or automate our proposal writing." required>
+                        
+                        <label for="budget">What budget range are you looking at for this project?</label>
+                        <select id="budget" name="budget_range">
+                            <option value="">Select a range</option>
+                            <option value="500-1000">$500 – $1,000</option>
+                            <option value="1000-3000">$1,000 – $3,000</option>
+                            <option value="3000-5000">$3,000 – $5,000</option>
+                            <option value="5000+">$5,000+</option>
                         </select>
                         
-                        <label for="message">Tell us about your situation</label>
-                        <textarea id="message" name="message" placeholder="What are you currently doing with AI? What's frustrating?"></textarea>
+                        <label for="timeline">When are you looking to have this solved by?</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select a timeframe</option>
+                            <option value="asap">ASAP (this week)</option>
+                            <option value="1month">Within 1 month</option>
+                            <option value="3months">Within 3 months</option>
+                            <option value="exploring">Just exploring for now</option>
+                        </select>
                         
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <label for="message">Anything else we should know?</label>
+                        <textarea id="message" name="additional_details" placeholder="Anything else about your situation..."></textarea>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Your Brief</button>
+                        <p class="optional-note">Want to talk instead of email? Just mention it above and we'll schedule a short call.</p>
                     </form>
                 </div>
             </div>
@@ -439,8 +465,8 @@
     <section class="cta">
         <div class="container">
             <h2>Ready to stop wasting money on AI?</h2>
-            <p>Book a free 15-minute call. No pitch. Just a conversation about how AI can actually help your business.</p>
-            <a href="#contact" class="btn btn-primary">Book Your Free Call</a>
+            <p>Submit your brief. We'll review it and send you a proposal with fixed pricing — no phone calls required.</p>
+            <a href="#contact" class="btn btn-primary">Submit Your Brief</a>
             <p style="margin-top: 24px; font-size: 0.85rem;">Or email: <a href="mailto:hello@appliedaiconsulting.io" class="email-link">hello@appliedaiconsulting.io</a></p>
         </div>
     </section>
