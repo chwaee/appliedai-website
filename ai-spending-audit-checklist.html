@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spending Audit Checklist — Applied AI Consulting</title>
+    <meta name="description" content="Find waste in your AI tool stack. Free checklist.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #1a1a1a; padding: 40px 24px; max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid #22c55e; padding-bottom: 24px; margin-bottom: 36px; }
+        h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.02em; }
+        .subtitle { color: #666; font-size: 1rem; margin-bottom: 16px; }
+        .brand { font-size: 0.85rem; color: #888; }
+        .brand a { color: #22c55e; text-decoration: none; }
+        h2 { font-size: 1.2rem; font-weight: 700; margin: 32px 0 12px; }
+        .section-note { color: #666; font-size: 0.88rem; margin-bottom: 16px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+        th { text-align: left; padding: 10px 12px; background: #fafafa; border: 1px solid #e0e0e0; font-weight: 600; font-size: 0.82rem; }
+        td { padding: 10px 12px; border: 1px solid #e0e0e0; }
+        td input[type="text"], td input[type="number"] { width: 100%; padding: 6px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.88rem; font-family: inherit; }
+        .score-instructions { background: #fafafa; padding: 16px 20px; border-radius: 8px; margin: 16px 0; font-size: 0.88rem; }
+        .score-instructions h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+        .score-row { margin-bottom: 12px; }
+        .score-row strong { font-size: 0.88rem; }
+        .checkbox-row { margin: 8px 0; font-size: 0.9rem; }
+        .checkbox-row input[type="checkbox"] { margin-right: 8px; transform: scale(1.1); }
+        .score-summary { background: #fafafa; padding: 20px; border-radius: 8px; margin: 24px 0; font-size: 0.9rem; }
+        .score-summary h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+        .score-summary ul { margin-left: 20px; }
+        .score-summary li { margin-bottom: 6px; }
+        .next-steps { margin-top: 32px; }
+        .next-steps h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+        .option { background: #fafafa; padding: 16px; border-radius: 8px; margin-bottom: 12px; }
+        .option strong { font-size: 0.92rem; }
+        .option p { font-size: 0.88rem; color: #666; margin-top: 4px; }
+        .cta-section { text-align: center; margin-top: 40px; padding: 32px; border: 2px solid #22c55e; border-radius: 12px; }
+        .cta-section h2 { font-size: 1.3rem; margin-bottom: 12px; }
+        .cta-section p { color: #666; margin-bottom: 16px; font-size: 0.95rem; }
+        .btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: #000; text-decoration: none; font-weight: 700; font-size: 0.95rem; border-radius: 8px; }
+        .btn:hover { background: #16a34a; }
+        .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; font-size: 0.8rem; color: #999; }
+        .footer a { color: #22c55e; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Spending Audit Checklist</h1>
+        <p class="subtitle">Find the waste in your AI tool stack — in 30 minutes or less.</p>
+        <p class="brand">By <a href="https://appliedaiconsulting.io">Applied AI Consulting</a></p>
+    </header>
+
+    <p>Most teams are paying for AI tools they don't need or barely use. This checklist takes about 30 minutes and helps you identify what to cut, keep, or replace.</p>
+
+    <p>No login required. Do it yourself, or <a href="https://appliedaiconsulting.io">let us help</a>.</p>
+
+    <!-- SECTION 1 -->
+    <h2>1. Inventory — What You're Paying For</h2>
+    <p class="section-note">List every AI tool your team pays for. ChatGPT, Copilot, Jasper, Midjourney, etc.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Tool name</th>
+                <th>Monthly cost</th>
+                <th>Who uses it?</th>
+                <th>Primary use case</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><input type="text" placeholder="e.g. ChatGPT Plus"></td><td><input type="text" placeholder="$20/mo"></td><td><input type="text" placeholder="3 people"></td><td><input type="text" placeholder="Content drafting"></td></tr>
+            <tr><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+            <tr><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+            <tr><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+            <tr><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 2 -->
+    <h2>2. Usage Assessment — Score Each Tool (1-5)</h2>
+    <p class="section-note">For each tool listed above, score it on each of the four criteria below. Be honest.</p>
+
+    <div class="score-instructions">
+        <h3>Scoring guide:</h3>
+        <div class="score-row">
+            <strong>A. How often is it used?</strong>
+            <ul>
+                <li>5 = Daily by multiple people</li>
+                <li>3 = Weekly or occasional use</li>
+                <li>1 = Rarely or never since initial signup</li>
+            </ul>
+        </div>
+        <div class="score-row">
+            <strong>B. What work does it do?</strong>
+            <ul>
+                <li>5 = Core work (drafting content, coding, analysis)</li>
+                <li>3 = Helpful but not essential</li>
+                <li>1 = Novelty / experimentation</li>
+            </ul>
+        </div>
+        <div class="score-row">
+            <strong>C. Could a different tool do this?</strong>
+            <ul>
+                <li>5 = Yes, multiple alternatives available</li>
+                <li>3 = Maybe, but this one is convenient</li>
+                <li>1 = No, it's specialized for our needs</li>
+            </ul>
+        </div>
+        <div class="score-row">
+            <strong>D. Does it handle sensitive data?</strong>
+            <ul>
+                <li>5 = Yes — customer data, IP, internal docs</li>
+                <li>3 = Sometimes</li>
+                <li>1 = No, only public/generic queries</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>3. Red Flags</h2>
+    <p class="section-note">Check every item that applies to your AI stack.</p>
+
+    <div class="checkbox-row"><input type="checkbox"> Tools nobody uses but keeps paying for</div>
+    <div class="checkbox-row"><input type="checkbox"> Multiple tools doing the same thing (e.g., two writing assistants)</div>
+    <div class="checkbox-row"><input type="checkbox"> Enterprise plan for a small team that doesn't need it</div>
+    <div class="checkbox-row"><input type="checkbox"> Sending customer or confidential data to public APIs</div>
+    <div class="checkbox-row"><input type="checkbox"> No idea what the monthly total actually is</div>
+    <div class="checkbox-row"><input type="checkbox"> Tools purchased on a whim and never revisited</div>
+
+    <!-- SECTION 4 -->
+    <h2>4. Your Score</h2>
+
+    <div class="score-summary">
+        <h3>Quick rules of thumb:</h3>
+        <ul>
+            <li>Any tool with an average score below 3 is probably not worth keeping.</li>
+            <li>2 or more red flags = you're leaving money on the table.</li>
+            <li>High "sensitive data" scores on multiple tools = consider local alternatives.</li>
+            <li>Multiple tools with overlapping use cases = consolidate or cancel duplicates.</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2>5. What to Do Next</h2>
+
+    <div class="next-steps">
+        <div class="option">
+            <strong>Option 1: DIY</strong>
+            <p>Use this checklist monthly. Cancel what's not earning its keep. Reassess when tools change.</p>
+        </div>
+        <div class="option">
+            <strong>Option 2: Research</strong>
+            <p>Look into local AI alternatives for tools that handle sensitive data. Local models can often replace cloud subscriptions.</p>
+        </div>
+        <div class="option">
+            <strong>Option 3: Professional Audit</strong>
+            <p>Want a proper analysis? We'll review your entire AI stack and deliver a written report with specific recommendations in 48 hours — <strong>$500 fixed price</strong>. Includes usage analysis, savings estimates, and prioritized automation opportunities.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Ready for a Professional Audit?</h2>
+        <p>We'll review your AI spending, identify waste, and show you what to cut. Clear report. Fixed price. 48-hour turnaround.</p>
+        <a href="https://appliedaiconsulting.io" class="btn">Get a Proposal →</a>
+    </div>
+
+    <div class="footer">
+        <p><a href="https://appliedaiconsulting.io">Applied AI Consulting</a> — Smart AI that stays within budget.</p>
+    </div>
+</body>
+</html>
